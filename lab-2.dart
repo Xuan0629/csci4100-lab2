@@ -13,7 +13,7 @@ void main() {
   }).toList();
 
   // Printing students
-  students.forEach(print);
+  students.forEach((grade)=>print('$grade'));
 
   // Instantiate player and enemy
   Player player = Player(name: "John", hp: 100, magicDamage: 30, mana: 50, defense: 5);
@@ -21,11 +21,13 @@ void main() {
 
   // Enemy attacks player
   int enemyAttackDamage = enemy.attack(player);
-  print("Enemy attacks player for $enemyAttackDamage damage! Player's HP: ${player.hp}");
+  print("Enemy attacks player for $enemyAttackDamage damage!");
+  print("Player's HP: ${player.hp}");
 
   // Player casts spell on enemy
   int playerMagicDamage = player.castSpell(enemy);
-  print("Player casts spell on enemy for $playerMagicDamage damage! Enemy's HP: ${enemy.hp}");
+  print("Player casts spell on enemy for $playerMagicDamage damage!");
+  print("Enemy's HP: ${enemy.hp}");
 }
 
 class Student {
